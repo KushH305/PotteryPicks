@@ -2,3 +2,8 @@
 # local env files
 .env*.local
 .env.local
+
+
+node_modules  // This is crucial
+build
+.DS_Store
