@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body,
+html,
+#root,
+canvas {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

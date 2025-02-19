@@ -1,0 +1,303 @@
+/* CSS Variables (customize these) */
+:root {
+    --color-cream: #f8f0e3; /* Light cream background */
+    --color-earth: #795744; /* Earthy brown for text */
+    --color-clay: #b5838d; /* Clay pink/brown for accents */
+    --color-sand: #e0c3ad; /* Light sand color for buttons */
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 6px 8px rgba(0, 0, 0, 0.15);
+    --transition-standard: all 0.3s ease;
+}
+
+.dashboard-page {
+    min-height: 100vh;
+    background-color: var(--color-cream);
+    padding-top: 80px; /* To account for the fixed navbar */
+    font-family: sans-serif; /* Consistent font */
+    color: var(--color-earth); /* Default text color */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 8%; /* Increased padding */
+    background-color: white;
+    box-shadow: var(--shadow-soft);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 1.5rem; /* Space between logo and title */
+}
+
+.navbar-title {
+    color: var(--color-earth);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    border: none;
+    font-size: 1rem;
+}
+
+.auth-button.logout {
+    background-color: transparent; /* Changed to secondary style */
+    color: var(--color-clay);
+    border: 2px solid var(--color-clay);
+}
+
+.auth-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.dashboard-layout {
+    display: flex;
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 2rem 1rem;
+    border-right: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.sidebar-item {
+    margin-bottom: 1rem;
+}
+
+.dropdown-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 2px solid var(--color-clay);
+    color: var(--color-clay);
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-standard);
+    display: flex; /* Enable flexbox for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Distribute space between text and icon */
+}
+
+.dropdown-button svg {
+    margin-left: 0.5rem; /* Add some space between text and icon */
+}
+
+.dropdown-button:hover {
+    background-color: var(--color-clay);
+    color: white;
+}
+
+.dropdown-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-soft);
+}
+
+.profile-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-input {
+    padding: 0.8rem;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    border-radius: 6px;
+}
+
+.save-button {
+    padding: 0.8rem;
+    background-color: var(--color-clay);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition-standard);
+}
+
+.save-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.past-shape-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.shape-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer; /* Make thumbnails clickable */
+}
+
+.shape-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto; /* Push actions to the right */
+}
+
+.action-button {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    background-color: var(--color-sand);
+    color: white;
+    transition: var(--transition-standard); /* Smooth transitions */
+}
+
+.action-button:hover {
+    transform: translateY(-1px); /* Subtle hover effect */
+    opacity: 0.9; /* Slightly reduce opacity on hover */
+}
+
+.action-button.delete {
+    background-color: #dc3545;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 2rem;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: var(--color-earth);
+    margin-bottom: 1.5rem;
+}
+
+.shapes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.shape-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: var(--transition-standard);
+    box-shadow: var(--shadow-soft);
+}
+
+.shape-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.shape-name {
+    margin-top: 1rem;
+    color: var(--color-earth);
+    font-size: 1.2rem;
+}
+
+.create-design-button {
+    display: inline-block; /* Make it a block element for better styling */
+    padding: 1rem 2rem;
+    background-color: var(--color-clay);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none; /* Remove underline from link */
+    transition: var(--transition-standard);
+    box-shadow: var(--shadow-soft);
+}
+
+.create-design-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.sidebar-container {
+  position: relative;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 100px; /* Positioned below the navbar */
+  left: 20px;
+  background: var(--color-clay);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: var(--transition-standard);
+}
+
+.toggle-btn:hover {
+  background: var(--color-earth);
+}
+.past-shapes-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color-sand);
+    color: var(--color-earth);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-standard);
+    box-shadow: var(--shadow-soft);
+    margin-right: 1rem; /* Space between buttons */
+}
+
+.past-shapes-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    opacity: 0.9;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+
+  .sidebar.open + .dashboard-main {
+    margin-left: 0;
+  }
+}

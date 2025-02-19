@@ -1,0 +1,220 @@
+/* PastShapes.css */
+
+.past-shapes-page {
+    min-height: 100vh;
+    background-color: var(--color-cream);
+    padding: 2rem 8%;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    color: var(--color-earth);
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.back-button {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    border: 2px solid var(--color-clay);
+    color: var(--color-clay);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: var(--color-clay);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.designs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.design-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.design-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.design-card-header h3 {
+    color: var(--color-earth);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.timestamp {
+    color: var(--color-clay);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.color-display {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.color-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: rgba(244, 164, 96, 0.05);
+    border-radius: 8px;
+}
+
+.face-name {
+    color: var(--color-earth);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.color-preview {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.color-square {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid rgba(139, 69, 19, 0.1);
+}
+
+.color-value {
+    color: var(--color-clay);
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: var(--color-clay);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(181, 131, 141, 0.1);
+    border-left-color: var(--color-clay);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+/* Error State */
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.error-message {
+    text-align: center;
+    color: var(--color-earth);
+}
+
+.retry-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-clay);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* No Designs State */
+.no-designs {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--color-earth);
+}
+
+.create-design-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-clay);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.create-design-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .past-shapes-page {
+        padding: 1rem 5%;
+    }
+
+    .page-header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .designs-grid {
+        grid-template-columns: 1fr;
+    }
+}
