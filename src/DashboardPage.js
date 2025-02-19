@@ -24,9 +24,9 @@ const DashboardPage = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const availableShapes = [
-        { id: 1, name: "Cube", thumbnail: "/cube-thumb.png" },
-        { id: 2, name: "Sphere", thumbnail: "/sphere-thumb.png" },
-        { id: 3, name: "Pyramid", thumbnail: "/pyramid-thumb.png" }
+        { id: 1, name: "Cube", thumbnail: "/cube-thumb.jpg" },
+        { id: 2, name: "Sphere", thumbnail: "/sphere-thumb.jpg" },
+        { id: 3, name: "Pyramid", thumbnail: "/pyramid-thumb.jpg" }
     ];
 
     const pastShapes = [
