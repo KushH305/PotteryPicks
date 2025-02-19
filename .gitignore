@@ -4,6 +4,6 @@
 .env.local
 
 
-node_modules  // This is crucial
+node_modules/
 build
 .DS_Store
