@@ -35,7 +35,7 @@ const HomePage = () => {
       <section className="models-section">
         <div className="models-grid">
           <div className="model-card animate-fadeInUp animate-delay-1">
-            <img src="/vase.png" alt="Vase" className="model-image" />
+            <img src="/vase.jpg" alt="Vase" className="model-image" />
             <h3 className="model-title">Classic Vase</h3>
             <p className="model-description">
               Elegant and timeless designs for your home
